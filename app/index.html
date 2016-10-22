@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project Manager Manager</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body ng-app="ambPmApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://www.google.es/chrome/browser/desktop/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <main layout="column" layout-fill ng-cloak ng-controller="HudCtrl">
+        <md-toolbar md-scroll-shrink ng-if="true" id="main_toolbar">
+            <div class="md-toolbar-tools">
+                <div flex layout="row" layout-align="start center">
+                    <md-button href="#/" class="" layout="row" layout-align="start center">
+                        <img src="images/ameba.png" class="amb_logo" alt="foto" />
+                        <span>PMM</span>
+                    </md-button>
+                </div>
+                <md-button class="md-icon-button" aria-label="SideBar" ng-click="openLeftMenu()">
+                    <i class="material-icons">menu</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Sidenav Left</h1>
+            </md-toolbar>
+            <md-content layout-padding>
+                <md-button href="#/about" ng-click="openLeftMenu()" class="md-hue-3 md-raised md-primary">
+                    Close Sidenav Left
+                </md-button>
+                <md-button ng-click="openLeftMenu()" class="md-primary">
+                    Close Sidenav Left
+                </md-button>
+            </md-content>
+        </md-sidenav>
+        <md-content flex ng-view>
+            <!-- silencio, silencio, silencio -->
+        </md-content>
+    </main>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    ! function(A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/hud.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
