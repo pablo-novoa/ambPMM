@@ -35,6 +35,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/asd', {
+        templateUrl: 'views/asd.html',
+        controller: 'AsdCtrl',
+        controllerAs: 'asd'
+      })
       .otherwise({
         redirectTo: '/'
       });
